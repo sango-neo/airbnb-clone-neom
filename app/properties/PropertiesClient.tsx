@@ -8,9 +8,10 @@ import { useCallback, useState } from "react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import ListingCard from "../components/listings/ListingCard";
+import { Listing } from "@prisma/client";
 
 interface PropertiesClientProps {
-    listings: SafeListing[];
+    listings: Listing[];
     currentUser?: SafeUser | null;
 }
 

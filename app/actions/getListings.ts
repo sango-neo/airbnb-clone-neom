@@ -89,7 +89,8 @@ export default async function getListings(
             createdAt: listing.createdAt.toISOString(),
         }));
 
-        return safeListings;
+        // return safeListings;
+        return listings;
     } catch (err: any) {
         throw new Error(err);
     }

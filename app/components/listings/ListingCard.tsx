@@ -8,11 +8,12 @@ import React, { useCallback, useMemo } from "react";
 import Image from "next/image"
 import HeartButton from "../HeartButton";
 import Button from "../Button";
+import { Listing, Reservation } from "@prisma/client";
 
 
 interface ListingCardProps {
-    data: SafeListing;
-    reservation?: SafeReservation;
+    data: Listing;
+    reservation?: Reservation;
     onAction?: (id: string) => void;
     disabled?: boolean;
     actionLabel?: string;

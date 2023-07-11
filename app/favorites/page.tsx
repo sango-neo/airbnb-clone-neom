@@ -9,16 +9,6 @@ const FavoritesPage = async () => {
     const favListings = await getFavoriteListings();
     const currentUser = await getCurrentUser();
 
-    // if (!currentUser) {
-    //     return (
-    //         <ClientOnly>
-    //             <EmptyState 
-    //                 title="You aren't signed in"
-    //                 subtitle="Sign in to see your favorite listings"
-    //             />
-    //         </ClientOnly>
-    //     )
-    // }
 
     if(favListings.length === 0) {
         return (

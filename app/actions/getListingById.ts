@@ -24,7 +24,7 @@ export default async function getListingById(params: IParams) {
         // return listing;
         return {
             ...listing,
-            createdAt: listing.createdAt.toISOString(),
+            // createdAt: listing.createdAt.toISOString(),
             user: {
                 ...listing.user,
                 createdAt: listing.user.createdAt.toISOString(),
@@ -32,6 +32,13 @@ export default async function getListingById(params: IParams) {
                 emailVerified: listing.user.emailVerified?.toISOString() || null,
             }
         };
+
+        // return {
+        //     ...listing,
+        //     user: {
+        //         ...listing?.user,
+        //     }
+        // }
     }
     catch (err: any) {
         throw new Error(err);
